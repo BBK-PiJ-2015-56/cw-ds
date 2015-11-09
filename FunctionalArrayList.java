@@ -1,13 +1,14 @@
-public class FunctionalLinkedList extends LinkedList{
+public class functionalList extends ArrayList{
 	public ReturnObject head(){
-		if(head == null){
+		if(objArray[0] == null){
 			return new ReturnObject(ErrorMessage.EMPTY_STRUCTURE , null);
 			}
 			else{
-				return head;
-				}
+				return objarray[0];
+			}
 	}
 	
-	
 	// public FunctionalList rest();
+
+
 }

@@ -1,8 +1,8 @@
-public class PointerList implements List{
+public class LinkedList implements List{
 	
 	private ReturnObjectImpl head;
 	
-	public PointerList(){   
+	public LinkedList(){   
 		head = null; 
 	}
 	
