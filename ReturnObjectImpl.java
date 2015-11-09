@@ -3,10 +3,10 @@ public class ReturnObjectImpl implements ReturnObject{
 	private ErrorMessage errMessage;
 	private ReturnObjectImpl next;
 	
-	public ReturnObjectImpl(ErrorMessage errMessage , Object obj){ // should impl be here??
+	public ReturnObjectImpl(ErrorMessage errMessage , Object obj){ 
 		this.obj = obj;
 		this.errMessage = errMessage;
-		next =  null; // we cant initialise here as it would go on forever
+		next =  null; 
 	}
 	
 	//another constructor without args, for temp and current constructions
@@ -30,7 +30,6 @@ public class ReturnObjectImpl implements ReturnObject{
 			return noErrorMessage;
 	}
 	
-	// note that a return Object can have a null obj and a null error!!!
 	public Object getReturnValue(){
 		return obj;
 	}
@@ -40,10 +39,6 @@ public class ReturnObjectImpl implements ReturnObject{
 	}
 	
 	
-	//Q) how will these insert methods be accessed 
-	//when we have declared them as returnobjects not returnobjectimpl's?
-	// may have to declare them as returnobjimpl's but 
-	//still return value may be ok as returnobjects??
 	public void insert(ReturnObjectImpl objToInsert , int index){
 		int count = 0;
 		ReturnObjectImpl current = new ReturnObjectImpl();
@@ -75,7 +70,6 @@ public class ReturnObjectImpl implements ReturnObject{
 	}
 	
 	
-	// recursively add return value onto string
 	public String listAsString(){
 		String str = "";
 		str += this.getReturnValue;
@@ -105,8 +99,6 @@ public class ReturnObjectImpl implements ReturnObject{
 		}
 		str += "] ";
 		return str;
-		// do I need this for reporting?? No. Just make sure erro is set when ReturnObject is returned or value is set if approprate.
-		//Q) when do I need to use either getValue or getError????
 	}
 	
 	

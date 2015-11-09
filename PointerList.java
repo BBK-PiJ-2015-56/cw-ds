@@ -3,7 +3,7 @@ public class PointerList implements List{
 	private ReturnObjectImpl head;
 	
 	public PointerList(){   
-		head = null; // this is not a null object, it's a null returnobject so thats fine
+		head = null; 
 	}
 	
 	public boolean isEmpty(){
@@ -16,7 +16,7 @@ public class PointerList implements List{
 	public int size(){
 		int count = 0;
 		ReturnObjectImpl current = head; 
-		while (current != null){ //null pointer exception!!!!
+		while (current != null){ 
 			count++;
 			current = current.getNext();
 		}
@@ -25,7 +25,7 @@ public class PointerList implements List{
 	
 	public ReturnObject get(int index){
 		ReturnObjectImpl current = head;
-		int count = 0; // or 1?? here it assumes 1st object is pos 0
+		int count = 0; 
 		while(count < index){
 			count++;
 			current = current.getNext();
@@ -40,7 +40,7 @@ public class PointerList implements List{
 		else{
 			ReturnObjectImpl current = new ReturnObjectImpl();
 			current = head;
-			int count = 0;    // or 1?
+			int count = 0;    
 			while(count < (index-1)){
 				count++;
 				current = current.getNext();
@@ -62,7 +62,6 @@ public class PointerList implements List{
 				}
 				else{
 					ReturnObjectImpl objToAdd = new ReturnObjectImpl(ErrorMessage.NO_ERROR , item);
-					// up to here is fine. checked by printing the element.
 					if(index == 0){
 						ReturnObjectImpl temp = new ReturnObjectImpl();
 						temp = head;

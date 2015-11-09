@@ -8,9 +8,6 @@ public class TestScript{
 		public void launch(){
 			List pList = new PointerList();
 			test(pList);
-			//List aList = new ArrayList(); 
-			//Q) the toString still works even though its declard as a list not an ArrayList! why?
-			//test(aList);
 		}
 			
 		public void test(List list){
@@ -29,11 +26,6 @@ public class TestScript{
 			System.out.println(list.toString());
 			System.out.println(list.add(3 , "This is an intrusive String"));
 			System.out.println(list.toString());
-			/*System.out.println("The size is " + list.size()); 
-			list.remove(2);
-			System.out.println(list.toString());
-			System.out.println("The size is " + list.size());
-			System.out.println(list.remove(15)); //should return retobj with error out of bounds*/
 		}
 		
 		
