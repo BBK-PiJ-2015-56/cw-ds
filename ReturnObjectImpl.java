@@ -70,21 +70,17 @@ public class ReturnObjectImpl implements ReturnObject{
 	}
 	
 	
+	// This method is for testing the pointer list for string objects
 	public String listAsString(){
-		String str = "";
-		str += this.getReturnValue;
-		if(this.getNext() != null){
-			str += this.getNext().listAsString();
+		String str = "" + obj;
+		if (next == null){
+			return str;
 		}
-		return str;
+		else{
+			return str + next.listAsString();
+			}
 	}
-			
-		
-		
-		
-		
-		
-	}
+	//This method is also for testing  the programme for String objects
 	public String toString(){
 		String str = "[ value: "+ this.getReturnValue();
 		switch (errMessage){

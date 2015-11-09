@@ -52,6 +52,7 @@ public class PointerList implements List{
 		}			
 	}
 	
+	// There is a problem with head.insert(). It seems to create a list of ReturnObjects where next is never null. 
 	public ReturnObject add(int index, Object item){
 		if(item == null){
 			return new ReturnObjectImpl(ErrorMessage.INVALID_ARGUMENT , null);
@@ -70,7 +71,6 @@ public class PointerList implements List{
 					}
 					else{
 						head.insert(objToAdd , index);
-						System.out.println("Hello");
 					}
 					return new ReturnObjectImpl(ErrorMessage.NO_ERROR , null);
 			}
@@ -94,12 +94,12 @@ public class PointerList implements List{
 	}
 	public String toString(){
 		if (head == null){
-			str += "The list is empty";
-			return str;
+			return "The list is empty";
 			}
 			else{
-				return "Here are the elements: "" + head.listAsString();
-				};
+				return "Here are the elements: " + head.listAsString();
+				}
+	}
 	/*public String toString(){
 		String str = "";
 		if (head == null){
